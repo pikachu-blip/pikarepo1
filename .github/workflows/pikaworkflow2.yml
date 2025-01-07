@@ -11,7 +11,7 @@ jobs:
               uses: actions/setup-node@v3
 
             - name: Changing dir
-              run: cd 02\ Starting\ Project
+              run: cd project
 
             - name: Install dependencies
               run: npm ci
