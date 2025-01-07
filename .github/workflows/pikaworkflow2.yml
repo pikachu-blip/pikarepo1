@@ -23,6 +23,7 @@ jobs:
 
 
     build-and-deploy:
+        needs: [testjob]
         runs-on: ubuntu-latest
         steps:
             - name: Get code
