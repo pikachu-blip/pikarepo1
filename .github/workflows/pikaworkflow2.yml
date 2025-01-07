@@ -10,11 +10,14 @@ jobs:
             - name: Install Nodejs
               uses: actions/setup-node@v3
 
-            - name: Changing dir
-              run: cd project
+              
 
             - name: Install dependencies
-              run: npm ci
+              run: |
+                cd project
+                npm ci
 
             - name: Run Tests
-              run: npm test
+              run: |
+                cd project
+                npm test
