@@ -10,7 +10,6 @@ jobs:
             - name: Install Nodejs
               uses: actions/setup-node@v3
 
-              
 
             - name: Install dependencies
               run: |
@@ -21,3 +20,28 @@ jobs:
               run: |
                 cd project
                 npm test
+
+
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+
+            - name: Install Nodejs
+              uses: actions/setup-node@v3
+
+
+            - name: Install dependencies
+              run: |
+                cd project
+                npm ci
+ 
+            - name: Build project
+              run: |
+                cd project
+                npm run build
+
+            - name: Deploying
+              run: echo "Deploying....."
+        
