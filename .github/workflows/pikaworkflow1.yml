@@ -1,13 +1,13 @@
-# name: workflow1
-# on: workflow_dispatch
-# jobs:
-#   job1:
-#     runs-on: ubuntu-latest
-#     steps:
-#        - name: Print KK
-#          run: echo "Hello KK"
-#        - name: Pika Pika
-#          run: echo "Pika Pika"
+name: workflow1
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Print KK
+         run: echo "Hello KK"
+       - name: Pika Pika
+         run: echo "Pika Pika"
 
 
          
