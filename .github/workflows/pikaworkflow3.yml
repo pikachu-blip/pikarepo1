@@ -1,0 +1,64 @@
+name: Test Proj
+on: [push]
+jobs:
+    linting:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+
+            - name: Install Nodejs
+              uses: actions/setup-node@v3
+
+
+            - name: Check for lint based errors
+              run: |
+                cd project2
+                npm run lint
+
+    
+    testing:
+        needs: [linting]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+
+            - name: Install Nodejs
+              uses: actions/setup-node@v3
+
+
+            - name: Install dependencies
+              run: |
+                cd project2
+                npm ci
+
+            - name: Run Tests
+              run: |
+                cd project2
+                npm test
+            
+
+
+    build-and-deploy:
+        needs: [testing]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+
+            - name: Install Nodejs
+              uses: actions/setup-node@v3
+
+
+            - name: Install dependencies
+              run: |
+                cd project2
+                npm ci
+ 
+            - name: Build project
+              run: |
+                cd project2
+                npm run build
+
+        
