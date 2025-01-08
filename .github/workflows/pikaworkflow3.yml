@@ -10,6 +10,10 @@ jobs:
             - name: Install Nodejs
               uses: actions/setup-node@v3
 
+            - name: Install dependencies
+              run: |
+                cd project2
+                npm ci
 
             - name: Check for lint based errors
               run: |
