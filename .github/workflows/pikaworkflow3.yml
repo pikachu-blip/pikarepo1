@@ -1,4 +1,4 @@
-name: Test Proj
+name: workflow3
 on: push
 jobs:
     linting:
