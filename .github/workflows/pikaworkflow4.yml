@@ -1,0 +1,11 @@
+name: workflow1
+on: issues
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Pika Pika
+         run: echo "${{ toJSON(github.event) }}"
+
+
+         
