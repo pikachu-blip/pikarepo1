@@ -35,6 +35,11 @@ jobs:
         run: |
             cd project4
             npm run build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+            name: my-artifacts
+            path: project4/dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
