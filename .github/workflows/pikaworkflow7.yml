@@ -1,0 +1,24 @@
+name: 'Manual Cloud Function Deploy'
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment (dev or prod)'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+
+jobs:
+  deploy-cloud-function:
+    name: 'Deploy Cloud Function'
+    runs-on: ubuntu-24.04
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      # Run the script to create Cloud functions
+      - name: 'Run Cloud Func Script'
+        run: |   
+          python abc.py
+    
