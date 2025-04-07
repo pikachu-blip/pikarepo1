@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 ENVIRONMENT = os.getenv("ENVIRONMENT", "DEV")
 
-if ENVIRONMENT==dev:
+if ENVIRONMENT=="dev":
   env_file =".env.DEV"
 else:
   env_file =".env.PROD"
