@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 
 ENVIRONMENT = os.getenv("ENVIRONMENT")
+print(ENVIRONMENT)
 
 if ENVIRONMENT=="dev":
   env_file =".env.DEV"
