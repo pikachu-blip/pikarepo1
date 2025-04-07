@@ -10,6 +10,8 @@ on:
         options:
           - dev
           - prod
+env:
+  ENVIRONMENT: ${{ github.event.inputs.environment }}
 
 jobs:
   deploy-cloud-function:
