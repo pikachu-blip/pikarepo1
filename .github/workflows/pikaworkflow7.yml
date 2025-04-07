@@ -18,6 +18,9 @@ jobs:
     environment: ${{ github.event.inputs.environment }}
 
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
+
       # Run the script to create Cloud functions
       - name: 'Run Cloud Func Script'
         run: |   
