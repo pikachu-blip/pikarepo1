@@ -16,6 +16,9 @@ jobs:
     name: 'Deploy Cloud Function'
     runs-on: ubuntu-24.04
     environment: ${{ github.event.inputs.environment }}
+    defaults:
+      run:
+        working-directory: .
     steps:
       # Run the script to create Cloud functions
       - name: 'Run Cloud Func Script'
