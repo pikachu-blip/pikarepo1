@@ -18,7 +18,7 @@ jobs:
     environment: ${{ github.event.inputs.environment }}
     defaults:
       run:
-        working-directory: ./
+        working-directory: ../
     steps:
       # Run the script to create Cloud functions
       - name: 'Run Cloud Func Script'
