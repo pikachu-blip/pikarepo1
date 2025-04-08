@@ -9,8 +9,10 @@ import os
 
 # print(f"Running in GitHub Environment: {GITHUB_ENVIRONMENT}")
 
-print(os.getenv(GITHUB_ENV))
 
+# Print all environment variables
+for key, value in os.environ.items():
+    print(f"{key}={value}")
 # if ENVIRONMENT=="dev":
 #   env_file =".env.DEV"
 # else:
