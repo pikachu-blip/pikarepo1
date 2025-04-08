@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set environment variable
-        run: echo "ENVIRONMENT=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
+        run: echo "ENVIRONMENT=${{ github.event.inputs.environment }}" >> "$GITHUB_ENV"
 
       # Run the script to create Cloud functions
       - name: 'Run Cloud Func Script'
