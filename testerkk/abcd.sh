@@ -1,1 +1,5 @@
-python abc.py
+#!/bin/bash
+
+ENVIRONMENT="$ENVIRONMENT"
+
+echo $ENVIRONMENT
