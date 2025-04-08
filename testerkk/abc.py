@@ -5,11 +5,11 @@ import os
 
 
 # Get the environment selected in GitHub Actions
-GITHUB_ENVIRONMENT = os.getenv("GITHUB_ENVIRONMENT")  # Default to dev
+# GITHUB_ENVIRONMENT = os.getenv("GITHUB_ENVIRONMENT")  # Default to dev
 
-print(f"Running in GitHub Environment: {GITHUB_ENVIRONMENT}")
+# print(f"Running in GitHub Environment: {GITHUB_ENVIRONMENT}")
 
-print(GITHUB_ENV)
+print(os.getenv(GITHUB_ENV))
 
 # if ENVIRONMENT=="dev":
 #   env_file =".env.DEV"
