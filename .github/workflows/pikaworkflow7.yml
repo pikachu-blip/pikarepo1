@@ -29,7 +29,4 @@ jobs:
       # Run the script to create Cloud functions
       - name: 'Run Cloud Func Script'
         run: |   
-          pip install python-dotenv
-          cd testerkk
-          chmod +x abcd.sh
-          ./abcd.sh
+           python abc.py
